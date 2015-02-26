@@ -1,5 +1,7 @@
 # LitePage
 
+[![Build Status](https://travis-ci.org/saclark/lite_page.svg?branch=master)](https://travis-ci.org/saclark/lite_page) [![Coverage Status](https://coveralls.io/repos/saclark/lite_page/badge.svg)](https://coveralls.io/r/saclark/lite_page)
+
 A gem providing a quick, clean, and concise means of implementing the Page Object Model pattern and defining a semantic DSL for automated acceptance tests using watir-webdriver.
 
 ## Installation
