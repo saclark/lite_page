@@ -4,9 +4,10 @@ require 'minitest/spec'
 require 'minitest/autorun'
 require 'minitest/reporters'
 
-Minitest::Reporters.use!(Minitest::Reporters::SpecReporter.new)
-SimpleCov.formatter = SimpleCov::Formatter::HTMLFormatter
-SimpleCov.start
+SimpleCov.start { add_filter '/test/' }
 Coveralls.wear!
+
+SimpleCov.formatter = SimpleCov::Formatter::HTMLFormatter
+Minitest::Reporters.use!(Minitest::Reporters::SpecReporter.new)
 
 require 'lite_page'
