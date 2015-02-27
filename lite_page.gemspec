@@ -27,4 +27,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'simplecov'
   spec.add_development_dependency 'coveralls', '~> 0.7'
   spec.add_development_dependency 'minitest-reporters'
+  spec.add_development_dependency 'yard'
 end

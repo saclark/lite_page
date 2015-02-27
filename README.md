@@ -25,6 +25,8 @@ World(LitePage::PageInitializers)
 ```
 
 Include `LightPage` in your page objects, define a `page_url` (if you want to be able to use the `PageInitializers`), and define elements on the page.
+
+Page elements are defined by calling a method corresponding to the appropriate element type and passing it the name by which you wish to access the element and the selectors used to locate it.
 ```ruby
 class LoginPage
   include LitePage

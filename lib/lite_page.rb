@@ -5,16 +5,27 @@ require 'lite_page/page_initializers'
 require 'lite_page/element_factory'
 
 module LitePage
+  # Extends the including class with the ElementFactory and ClassMethods modules.
   def self.included(base)
     base.extend(ElementFactory)
     base.extend(ClassMethods)
   end
 
+  # Initializes the page instance and sets the browser instance
+  #
+  # @param browser [Object] the browser instance
+  # @return [Object] the browser instance
   def initialize(browser)
     @browser = browser
   end
 
   module ClassMethods
+    # Defines an instance method :page_url which returns the url passed to this
+    # method and takes optional query parameters that will be appended to the
+    # url if given.
+    #
+    # @param url [String] the page url
+    # @return [Symbol] the name of the defined method (ruby 2.1+)
     def page_url(url)
       define_method(:page_url) do |query_params = {}|
         uri = URI(url)
