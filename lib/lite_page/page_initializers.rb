@@ -2,11 +2,10 @@ module LitePage
   module PageInitializers
     # Initializes an instance of the given page class, drives the given browser
     # instance to the page's url with any given query parameters appended,
-    # yields the page instance to a block if given, and returns the instance.
+    # yields the page instance to a block if given, and returns the page instance.
     #
     # @param page_class [Class] the page class
-    # @param query_params [Hash, Array] the query parameters to append to the
-    # page url to viist
+    # @param query_params [Hash, Array] the query parameters to append to the page url to viist
     # @param browser [Object] the browser instance
     # @yield [page] yields page instance to a block
     def visit(page_class, query_params = {}, browser = @browser)

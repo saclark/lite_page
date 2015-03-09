@@ -20,7 +20,7 @@ module LitePage
   end
 
   module ClassMethods
-    # Defines an instance method :page_url which returns the url passed to this
+    # Defines an instance method `page_url` which returns the url passed to this
     # method and takes optional query parameters that will be appended to the
     # url if given.
     #

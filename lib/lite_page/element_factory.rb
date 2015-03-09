@@ -1,11 +1,11 @@
 module LitePage
   # Defines a set of class methods on the including class corresponding to
-  # each of the instance methods available on the Watir::Container class.
+  # each of the instance methods available on the `Watir::Container` class.
   # Each class method takes a symbol or string that will be used to
   # dynamically define an instance method on the including class that takes
   # any number of arguments so long as they are valid arguments for the
-  # corresponding Watir::Container instance method. When the instance method
-  # is called, it will call the corresponding Watir::Container instance method
+  # corresponding `Watir::Container` instance method. When the instance method
+  # is called, it will call the corresponding `Watir::Container` instance method
   # on the class instance's browser instance along with the parameters given
   # to the class method.
   module ElementFactory
