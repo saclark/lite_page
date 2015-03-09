@@ -45,7 +45,7 @@ class LitePageTest < Minitest::Spec
         page.new(nil).page_url([[:foo, 'bar']]).must_equal('http://www.example.com?foo=bar')
       end
 
-      it 'should create query string if non existed before' do
+      it 'should create query string if none existed before' do
         page.page_url('http://www.example.com')
         page.new(nil).page_url(:foo => 'bar').must_equal('http://www.example.com?foo=bar')
 
