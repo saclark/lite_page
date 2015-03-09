@@ -46,7 +46,7 @@ end
 
 Visit and interact with your page objects.
 ```ruby
-visit(LoginPage).login('afinch', 'pa55w0rd')
+visit(LoginPage).log_in('afinch', 'pa55w0rd')
 ```
 
 ## Contributing
