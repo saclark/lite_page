@@ -46,8 +46,11 @@ end
 
 Visit and interact with your page objects.
 ```ruby
-visit(LoginPage).log_in('afinch', 'pa55w0rd')
+visit(LoginPage).log_in('afinch', 'mockingbird60')
 ```
+
+## Documentation
+Check out the wiki: https://github.com/saclark/lite_page/wiki
 
 ## Contributing
 
