@@ -19,12 +19,12 @@ Or install it yourself as:
     $ gem install lite_page
 
 ## Usage
-If you are using cucumber, include `LitePage::PageInitializers` in the cucumber World instance. This will provide you with the `on` and `visit` methods to use in your step definitions (i.e. `on(LoginPage).login` or `visit(SearchPage).search('widgets')`) 
+If you are using cucumber, include `LitePage::PageInitializers` in the cucumber World instance. This will provide `on` and `visit` methods with which to interact with your page objects.
 ```ruby
 World(LitePage::PageInitializers)
 ```
 
-Include `LightPage` in your page objects, define a `page_url` (if you want to be able to use the `PageInitializers`), and define elements on the page.
+Include `LightPage` in your page objects, define a `page_url` (if you want to be able to visit the page using the `visit` method), and define elements on the page.
 
 Page elements are defined by calling a method corresponding to the appropriate element type and passing it the name by which you wish to access the element and the selectors used to locate it.
 ```ruby
