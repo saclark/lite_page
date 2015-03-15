@@ -19,14 +19,16 @@ Or install it yourself as:
     $ gem install lite_page
 
 ## Usage
-If you are using cucumber, include `LitePage::PageInitializers` in the cucumber World instance. This will provide `on` and `visit` methods with which to interact with your page objects.
+You can find comprehensive [documentation in the wiki](https://github.com/saclark/lite_page/wiki)
+
+### Example
+
+If using cucumber, include `LitePage::PageInitializers` in the `World` instance
 ```ruby
 World(LitePage::PageInitializers)
 ```
 
-Include `LightPage` in your page objects, define a `page_url` (if you want to be able to visit the page using the `visit` method), and define elements on the page.
-
-Page elements are defined by calling a method corresponding to the appropriate element type and passing it the name by which you wish to access the element and the selectors used to locate it.
+Define a page object:
 ```ruby
 class LoginPage
   include LitePage
@@ -44,13 +46,10 @@ class LoginPage
 end
 ```
 
-Visit and interact with your page objects.
+Interact with the page:
 ```ruby
 visit(LoginPage).log_in('afinch', 'mockingbird60')
 ```
-
-## Documentation
-Check out the wiki: https://github.com/saclark/lite_page/wiki
 
 ## Contributing
 
