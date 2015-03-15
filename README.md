@@ -18,10 +18,10 @@ Or install it yourself as:
 
     $ gem install lite_page
 
-## Usage
+## Documentation
 You can find comprehensive [documentation in the wiki](https://github.com/saclark/lite_page/wiki)
 
-### Example
+### Example Usage
 
 If using cucumber, include `LitePage::PageInitializers` in the `World` instance
 ```ruby
