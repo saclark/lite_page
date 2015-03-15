@@ -19,7 +19,7 @@ Or install it yourself as:
     $ gem install lite_page
 
 ## Usage
-If you are using cucumber, include the page initialization helper methods in the cucumber World instance.
+If you are using cucumber, include `LitePage::PageInitializers` in the cucumber World instance. This will provide you with the `on` and `visit` methods to use in your step definitions (i.e. `on(LoginPage).login` or `visit(SearchPage).search('widgets')`) 
 ```ruby
 World(LitePage::PageInitializers)
 ```
