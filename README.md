@@ -32,15 +32,18 @@ Define a page object:
 ```ruby
 class LoginPage
   include LitePage
+  
   page_url('http://www.example.com/login')
 
-  text_field(:username, :label => 'Username')
-  text_field(:password, :label => 'Password')
-  button(:log_in_button, :text => 'Log In')
+  def_elements(:@browser, {
+    :username_field => [:text_field, :id => 'username'],
+    :password_field => [:text_field, :id => 'password'],
+    :log_in_button => [:button, :value => 'Log In']
+  })
 
   def log_in(username, password)
-    self.username.set(username)
-    self.password.set(password)
+    self.username_field.set(username)
+    self.password_field.set(password)
     self.log_in_button.click
   end
 end
