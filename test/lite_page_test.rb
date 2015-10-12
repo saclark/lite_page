@@ -4,10 +4,10 @@ class LitePageTest < Minitest::Spec
   describe LitePage do
     let(:page) { Class.new { include LitePage } }
 
-
     describe '::included' do
-      it 'should extend the class with ClassMethods' do
+      it 'should extend the class with ClassMethods and ElementFactory' do
         page.is_a?(LitePage::ClassMethods).must_equal(true)
+        page.is_a?(LitePage::ElementFactory).must_equal(true)
       end
     end
 
