@@ -3,7 +3,7 @@ module LitePage
     # Provides convenient method for concisely defining element getters
     #
     # @param root_elem_var_name [Symbol] the name of the instance variable
-    #   containing the element on which methods should be caleld
+    #   containing the element on which methods should be called
     #   (typically the browser instance).
     # @param element_definitions [Hash] the hash used to define element getters
     #   on the class instance where each key represents the name of the method
